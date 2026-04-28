@@ -70,8 +70,8 @@ function Header() {
                 <nav>
                     <ul className="nav-list">
                         {navItems.map((item) => (
-                            <li key={item} className={item === 'COMICS' ? 'active' : ''}>
-                                <a href="#">{item}</a>
+                            <li key={item.id} className={item.active ? 'active' : ''}>
+                                <a href={item.url}>{item.text}</a>
                             </li>
                         ))}
                     </ul>
