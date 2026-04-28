@@ -1,11 +1,22 @@
+import comics from '../data/comics'
+import ComicCard from './ComicCard'
+
 function Main() {
     return (
         <main>
-            <div className="jumbotron"></div>
+            <section className="jumbotron"></section>
 
-            <section className="main-content">
+            <section className="comics-section">
                 <div className="container">
-                    <h1>--&gt; Content goes here &lt;--</h1>
+                    <h2 className="section-label">CURRENT SERIES</h2>
+
+                    <div className="comics-grid">
+                        {comics.map((comic) => (
+                            <ComicCard key={comic.id} comic={comic} />
+                        ))}
+                    </div>
+
+                    <button className="load-more">LOAD MORE</button>
                 </div>
             </section>
         </main>
