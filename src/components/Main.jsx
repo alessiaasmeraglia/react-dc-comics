@@ -1,7 +1,6 @@
-import comics from '../data/comics'
 import ComicCard from './ComicCard'
 
-function Main() {
+function Main({ comics }) {
     return (
         <main>
             <section className="jumbotron"></section>
