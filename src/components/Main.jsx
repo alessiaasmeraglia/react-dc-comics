@@ -11,7 +11,10 @@ function Main({ comics }) {
 
                     <div className="comics-grid">
                         {comics.map((comic) => (
-                            <ComicCard key={comic.id} comic={comic} />
+                            <ComicCard 
+                                key={comic.id} 
+                                comic={comic} 
+                            />
                         ))}
                     </div>
 
